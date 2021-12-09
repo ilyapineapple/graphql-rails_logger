@@ -9,35 +9,13 @@
 </p>
 
 ##### Without `GraphQL::RailsLogger` your query in terminal will look difficult to read:
-```
-Started POST "/graphql/" for ::1 at 2021-12-08 19:38:01 +0300
-   (0.4ms)  SELECT sqlite_version(*)
-   (0.0ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
-Processing by GraphqlController#execute as */*
-  Parameters: {"query"=>"query {\n    allPosts {\n        id\n        title\n        description      \n        comments {\n            id\n            comment\n        }\n        commentsCount\n    }\n}", "graphql"=>{"query"=>"query {\n    allPosts {\n        id\n        title\n        description      \n        comments {\n            id\n            comment\n        }\n        commentsCount\n    }\n}"}}
-```
+
+![screenshot_before](misc/screenshot_before.png)
+
 ##### With `GraphQL::RailsLogger` it will look more readable:
 
-```
-Started POST "/graphql/" for ::1 at 2021-12-08 19:45:07 +0300
-   (0.4ms)  SELECT sqlite_version(*)
-   (0.1ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
-Processing by GraphqlController#execute as */*
+![screenshot_after](misc/screenshot_after.png)
 
-Query:
-  query {
-      allPosts {
-          id
-          title
-          description      
-          comments {
-              id
-              comment
-          }
-          commentsCount
-      }
-  }
-```
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -100,7 +78,7 @@ Everyone interacting in the `GraphQL::RailsLogger` project’s codebases, issue 
 
 ## About JetRuby
 
-`GraphQL::RailsLogger` is maintained and founded by JetRuby Agency.
+`GraphQL::RailsLogger` is maintained and founded by [JetRuby Agency](https://jetruby.com/).
 
 We love open source software!
 See [our projects][portfolio] or
