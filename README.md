@@ -5,6 +5,7 @@
   <br />
   <code>GraphQL::RailsLogger</code> allows you to inspect GraphQL queries<br/> in a more readable format.
   <br/><br/>
+  <a href="https://badge.fury.io/rb/graphql-rails_logger"><img src="https://badge.fury.io/rb/graphql-rails_logger.svg" alt="Gem Version" height="18"></a>
 </p>
 
 ##### Without `GraphQL::RailsLogger` your query in terminal will look difficult to read:
